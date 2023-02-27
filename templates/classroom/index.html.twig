@@ -1,0 +1,10 @@
+<table border="1">
+{%for c in classrooms%}
+<tr>
+<td>{{c.id}}</td>
+<td>{{c.name}}</td>
+<td><a href="{{path('update_classroom',{'id':c.id})}}">update</a></td>
+<td><a href="{{path('delete_classroom',{'id':c.id})}}">delete</a></td>
+</tr>
+{%endfor%}
+</table>
